@@ -13,14 +13,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let data of basicTable.data">
+      <tr *ngFor="let data of patients; let i = index;">
         <td>{{data.name}}</td>
         <td>{{data.age}}</td>
         <td>{{data.sex}}</td>
-        <td>{{data.checkInDate}}</td>
+        <td>{{data.checkInDate | date: 'shortDate'}}</td>
         <td>
           <nz-space>
-            <a *nzSpaceItem><span nz-icon nzType="edit" nzTheme="outline" nz-tooltip nzTooltipTitle="Edit patient details" (click)="openEditPatientModal(data)"></span></a>
+            <a *nzSpaceItem><span nz-icon nzType="edit" nzTheme="outline" nz-tooltip nzTooltipTitle="Edit patient details" (click)="openEditPatientModal(data, i)"></span></a>
             <a *nzSpaceItem><span nz-icon nzType="delete" nzTheme="outline" nz-tooltip nzTooltipTitle="Delete patient" (click)="deletePatient(data)"></span></a>
             <a *nzSpaceItem><span nz-icon nzType="history" nzTheme="outline" nz-tooltip nzTooltipTitle="View patient record history"></span></a>
           </nz-space>

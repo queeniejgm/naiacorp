@@ -24,7 +24,7 @@
     {
       "name": "Queenie",
       "age": 29,
-      "sex": null,
+      "sex": "Female",
       "checkInDate": "2022-11-22T11:16:41.322Z",
       "id": 4
     },
@@ -34,34 +34,6 @@
       "sex": "Female",
       "checkInDate": "2022-11-29T11:20:31.791Z",
       "id": 5
-    },
-    {
-      "name": "jaybee",
-      "age": 12,
-      "sex": null,
-      "checkInDate": "2022-11-24T11:27:22.083Z",
-      "id": 6
-    },
-    {
-      "name": "toink",
-      "age": 12,
-      "sex": "Female",
-      "checkInDate": "2022-11-24T11:28:11.959Z",
-      "id": 7
-    },
-    {
-      "name": "qqqq",
-      "age": 1,
-      "sex": "Undisclosed",
-      "checkInDate": "2022-11-29T11:29:09.020Z",
-      "id": 8
-    },
-    {
-      "name": "fdg",
-      "age": 2,
-      "sex": null,
-      "checkInDate": "2022-11-01T11:29:45.208Z",
-      "id": 9
     }
   ]
 }

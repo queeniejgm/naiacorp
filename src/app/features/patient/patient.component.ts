@@ -17,8 +17,7 @@ export class PatientComponent implements OnInit {
 
   constructor(
     private patientService: PatientService,
-    private modalService: NzModalService,
-    private cdr: ChangeDetectorRef
+    private modalService: NzModalService
   ) {}
 
   ngOnInit(): void {
@@ -39,11 +38,10 @@ export class PatientComponent implements OnInit {
 
     dialogRef.afterClose.subscribe((resp) => {
       this.patients.push(resp);
-      this.cdr.detectChanges();
     });
   }
 
-  openEditPatientModal(data: Patient) {
+  openEditPatientModal(data: Patient, index: number) {
     const dialogRef = this.modalService.create({
       nzTitle: "Add Patient",
       nzContent: AddPatientComponent,
@@ -53,8 +51,7 @@ export class PatientComponent implements OnInit {
     });
 
     dialogRef.afterClose.subscribe((resp) => {
-      this.patients.push(resp);
-      this.cdr.detectChanges();
+      this.patients[index] = resp;
     });
   }
 
@@ -65,6 +62,7 @@ export class PatientComponent implements OnInit {
       nzOnOk: () => {
         this.patientService.deletePatient(data.id).subscribe({
           next: (res) => {
+            this.patients = this.patients.filter(patient =>  patient.id !== data.id)
             this.modalService.success({
               nzTitle: `Patient ${data.name} has been deleted`,
             });
