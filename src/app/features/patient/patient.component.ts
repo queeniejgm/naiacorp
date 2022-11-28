@@ -43,6 +43,21 @@ export class PatientComponent implements OnInit {
     });
   }
 
+  openEditPatientModal(data: Patient) {
+    const dialogRef = this.modalService.create({
+      nzTitle: "Add Patient",
+      nzContent: AddPatientComponent,
+      nzComponentParams: {
+        patientData: data
+      }
+    });
+
+    dialogRef.afterClose.subscribe((resp) => {
+      this.patients.push(resp);
+      this.cdr.detectChanges();
+    });
+  }
+
   deletePatient(data: Patient) {
     this.modalService.confirm({
       nzTitle: "Delete Patient",

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { CreatePatientParameter, Patient } from '../interfaces/patient';
+import { PatientParameters, Patient } from '../interfaces/patient';
 
 @Injectable({
   providedIn: 'root'
@@ -17,8 +17,12 @@ export class PatientService {
     );
   }
 
-  createPatient(params: CreatePatientParameter): Observable<Patient> {
+  createPatient(params: PatientParameters): Observable<Patient> {
     return this.http.post<any>(`${this.baseUrl}/patients`, params);
+  }
+
+  updatePatient(params: PatientParameters, id: string): Observable<Patient> {
+    return this.http.patch<any>(`${this.baseUrl}/patients/${id}`, params);
   }
 
   deletePatient(id: string): Observable<Patient> {

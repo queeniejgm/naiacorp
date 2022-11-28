@@ -6,7 +6,7 @@ export interface Patient {
     checkInDate: Date;
   }
   
-  export interface CreatePatientParameter {
+  export interface PatientParameters {
     name: string;
     age: number;
     sex: string;
