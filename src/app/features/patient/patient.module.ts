@@ -14,6 +14,14 @@ import { NZ_I18N, en_US } from 'ng-zorro-antd/i18n';
 import { IconDefinition } from '@ant-design/icons-angular';
 import * as AllIcons from '@ant-design/icons-angular/icons';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { AddPatientComponent } from './add-patient/add-patient.component';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzGridModule } from 'ng-zorro-antd/grid';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
+import { NzRadioModule } from 'ng-zorro-antd/radio';
+import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 
 registerLocaleData(en);
 
@@ -23,7 +31,7 @@ const antDesignIcons = AllIcons as {
 const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesignIcons[key])
 
 @NgModule({
-  declarations: [PatientComponent],
+  declarations: [PatientComponent, AddPatientComponent],
   imports: [
     CommonModule,
     PatientRoutingModule,
@@ -31,7 +39,15 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
     NzIconModule,
     NzToolTipModule,
     NzSpaceModule,
-    NzButtonModule
+    NzButtonModule,
+    NzModalModule,
+    NzGridModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NzFormModule,
+    NzInputNumberModule,
+    NzRadioModule,
+    NzDatePickerModule
   ],
   exports: [PatientRoutingModule],
   

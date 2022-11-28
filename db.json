@@ -1,0 +1,88 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "age": "25",
+      "sex": "Male",
+      "checkInDate": "2022-11-28"
+    },
+    {
+      "id": 2,
+      "name": "Billie Eilish",
+      "age": "28",
+      "sex": "Female",
+      "checkInDate": "2022-10-28"
+    },
+    {
+      "id": 3,
+      "name": "Patient Three",
+      "age": "60",
+      "sex": "Undisclosed",
+      "checkInDate": "2022-11-15"
+    },
+    {
+      "name": "Queenie",
+      "age": 29,
+      "sex": null,
+      "checkInDate": "2022-11-22T11:16:41.322Z",
+      "id": 4
+    },
+    {
+      "name": "Jaybee",
+      "age": 78,
+      "sex": "Female",
+      "checkInDate": "2022-11-29T11:20:31.791Z",
+      "id": 5
+    },
+    {
+      "name": "jaybee",
+      "age": 12,
+      "sex": null,
+      "checkInDate": "2022-11-24T11:27:22.083Z",
+      "id": 6
+    },
+    {
+      "name": "toink",
+      "age": 12,
+      "sex": "Female",
+      "checkInDate": "2022-11-24T11:28:11.959Z",
+      "id": 7
+    },
+    {
+      "name": "qqqq",
+      "age": 1,
+      "sex": "Undisclosed",
+      "checkInDate": "2022-11-29T11:29:09.020Z",
+      "id": 8
+    },
+    {
+      "name": "fdg",
+      "age": 2,
+      "sex": null,
+      "checkInDate": "2022-11-01T11:29:45.208Z",
+      "id": 9
+    },
+    {
+      "name": "zzzzzz",
+      "age": 22,
+      "sex": null,
+      "checkInDate": "2021-12-01T11:30:12.057Z",
+      "id": 10
+    },
+    {
+      "name": "sdjksdnd",
+      "age": 11,
+      "sex": "Female",
+      "checkInDate": "2022-11-30T11:40:12.168Z",
+      "id": 11
+    },
+    {
+      "name": "dsfsd",
+      "age": 12,
+      "sex": "Male",
+      "checkInDate": "2022-11-25T11:41:13.735Z",
+      "id": 12
+    }
+  ]
+}

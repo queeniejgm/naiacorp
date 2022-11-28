@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Patient } from 'src/app/core/interfaces/patient';
 import { PatientService } from 'src/app/core/services/patient.service';
+import { NzModalRef, NzModalService } from 'ng-zorro-antd/modal';
+import { AddPatientComponent } from './add-patient/add-patient.component';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-patient',
@@ -10,7 +13,10 @@ import { PatientService } from 'src/app/core/services/patient.service';
 export class PatientComponent implements OnInit {
 
   patients: Patient[] = [];
-  constructor(private patientService: PatientService) { }
+  isVisible:boolean = false;
+  isConfirmLoading:boolean = false;
+
+  constructor(private patientService: PatientService, private modalService: NzModalService, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.patientService.getPatients().subscribe({
@@ -22,4 +28,15 @@ export class PatientComponent implements OnInit {
     });
   }
 
+  openAddPatientModal() {
+    const dialogRef = this.modalService.create({
+      nzTitle: 'Add Patient',
+      nzContent: AddPatientComponent
+    });
+
+    dialogRef.afterClose.subscribe(resp => {
+      this.patients.push(resp);
+      this.cdr.detectChanges();
+    })
+  }
 }
