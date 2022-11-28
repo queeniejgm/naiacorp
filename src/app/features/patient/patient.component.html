@@ -1,1 +1,30 @@
-<p>patient works!</p>
+<button nz-button nzType="primary"  nzShape="round" >
+  <span nz-icon nzType="plus"></span>
+  Add Patient
+</button>
+<nz-table #basicTable [nzData]="patients">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Sex</th>
+        <th>Check-in Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>{{data.name}}</td>
+        <td>{{data.age}}</td>
+        <td>{{data.sex}}</td>
+        <td>{{data.checkInDate}}</td>
+        <td>
+          <nz-space>
+            <a *nzSpaceItem><span nz-icon nzType="edit" nzTheme="outline" nz-tooltip nzTooltipTitle="Edit patient details"></span></a>
+            <a *nzSpaceItem><span nz-icon nzType="delete" nzTheme="outline" nz-tooltip nzTooltipTitle="Delete patient"></span></a>
+            <a *nzSpaceItem><span nz-icon nzType="history" nzTheme="outline" nz-tooltip nzTooltipTitle="View patient record history"></span></a>
+          </nz-space>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>

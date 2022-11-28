@@ -1,27 +1,25 @@
 {
-    "users": [
+    "patients": [
       {
         "id": 1,
-        "username": "duncan",
-        "country": "australia",
-        "password": "123"
+        "name": "John Doe",
+        "age": "25",
+        "sex": "Male",
+        "checkInDate": "2022-11-28"
       },
       {
         "id": 2,
-        "username": "sarah",
-        "country": "england",
-        "password": "123"
+        "name": "Billie Eilish",
+        "age": "28",
+        "sex": "Female",
+        "checkInDate": "2022-10-28"
       },
       {
         "id": 3,
-        "username": "admin",
-        "country": "usa",
-        "password": "123"
-      },
-      {
-        "username": "test2",
-        "password": "123",
-        "id": 4
+        "name": "Patient Three",
+        "age": "60",
+        "sex": "Undisclosed",
+        "checkInDate": "2022-11-15"
       }
     ],
     "profiles": [
