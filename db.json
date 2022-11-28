@@ -62,27 +62,6 @@
       "sex": null,
       "checkInDate": "2022-11-01T11:29:45.208Z",
       "id": 9
-    },
-    {
-      "name": "zzzzzz",
-      "age": 22,
-      "sex": null,
-      "checkInDate": "2021-12-01T11:30:12.057Z",
-      "id": 10
-    },
-    {
-      "name": "sdjksdnd",
-      "age": 11,
-      "sex": "Female",
-      "checkInDate": "2022-11-30T11:40:12.168Z",
-      "id": 11
-    },
-    {
-      "name": "dsfsd",
-      "age": 12,
-      "sex": "Male",
-      "checkInDate": "2022-11-25T11:41:13.735Z",
-      "id": 12
     }
   ]
 }
